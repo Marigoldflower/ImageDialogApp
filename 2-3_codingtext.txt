@@ -1,0 +1,22 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<string> order) {
+    int totalCost = 0;
+
+    for (string menu : order) {
+        if (menu == "iceamericano" || menu == "americanoice" || 
+            menu == "hotamericano" || menu == "americanohot" || 
+            menu == "americano" || menu == "anything") {
+            totalCost += 4500; 
+        } else if (menu == "icecafelatte" || menu == "cafelatteice" || 
+                   menu == "hotcafelatte" || menu == "cafelattehot" || 
+                   menu == "cafelatte") {
+            totalCost += 5000; 
+        }
+    }
+
+    return totalCost;
+}
